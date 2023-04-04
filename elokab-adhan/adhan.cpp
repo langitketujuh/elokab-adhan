@@ -447,7 +447,6 @@ void Adhan::calculateManualTime()
 void Adhan::nextPrayer()
 {
     QTime currentTime = m_time;
-    ui->labelSalat->setPixmap(":/images/"+QString::number( 0));
     m_nextPrayerName = m_prayerNameList.at(0);
     m_nextPrayerTime = m_prayerTimeList.at(0);
     m_previousPrayerName = m_prayerNameList.at(5);
@@ -460,18 +459,6 @@ void Adhan::nextPrayer()
     for(i=0; i<6; i++)
     {
         qDebug()<<i<<currentTime.toString("hh:mm:ss");
-        if(currentTime < m_prayerTimeList.at(i) && m_prayersToShowList.at(i).toBool())
-        {
-            qDebug()<<"curent======"<<i<<m_prayerNameList.at(i);
-            ui->labelSalat->setPixmap(":/images/"+QString::number( i));
-
-            m_nextPrayerName = m_prayerNameList.at(i);
-            m_nextPrayerTime = m_prayerTimeList.at(i);
-            m_prayerColorList.replace(i, m_ColorNext.name()); // Current prayer
-
-
-            break;
-        }
     }
 
     //    m_prayerNameList << tr("Fajr") << tr("Sunrise") << tr("Dhuhr")
