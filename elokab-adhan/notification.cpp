@@ -69,7 +69,7 @@ NotificationForm::NotificationForm(QWidget *parent) :
     
     m_notificationUi.horizontalLayout_2->addWidget(volumeSlider);
     
-      connect(m_notificationUi.enableSoundCheckBox, SIGNAL(toggled(bool)), this, SLOT(enableVolumeSlider(bool)));
+    connect(m_notificationUi.enableSoundCheckBox, SIGNAL(toggled(bool)), this, SLOT(enableVolumeSlider(bool)));
 
 #endif
  //#endif
@@ -112,7 +112,7 @@ void NotificationForm::loadSettings()
 
     m_notificationUi.soundSelect->setText(cg.value("soundFilePath", m_resourceDir + "hayy.ogg").toString());
     m_notificationUi.soundFajrSelect->setText(cg.value("soundFajrFilePath", m_resourceDir + "hayy.ogg").toString());
-     m_notificationUi.soundDuaaSelect->setText(cg.value("soundDuaaFilePath", m_resourceDir + "duaa.ogg").toString());
+    m_notificationUi.soundDuaaSelect->setText(cg.value("soundDuaaFilePath", m_resourceDir + "duaa.ogg").toString());
     m_notificationUi.enableSoundCheckBox->setChecked(cg.value("athanSoundEnabled", true).toBool());
     m_notificationUi.enableDuaaCheckBox->setChecked(cg.value("duaaSoundEnabled", false).toBool());
 
@@ -120,14 +120,14 @@ void NotificationForm::loadSettings()
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 0, 0))
 
     mediaPlayer->setVolume(cg.value("soundVolume", 100).toInt());
-     slider->setValue(mediaPlayer->volume());
+    slider->setValue(mediaPlayer->volume());
 #else
-  audioOutput->setVolume(cg.value("soundVolume", 1.0).toReal());
+    audioOutput->setVolume(cg.value("soundVolume", 1.0).toReal());
 #endif
  //#endif
      m_notificationUi.notifyBeforeCheckBox->setChecked(cg.value("notifyBeforeAthan", true).toBool());
      m_notificationUi.notifyBeforeSpinBox->setValue(cg.value("notifyBeforeAthanVal", 5).toInt());
-    m_notificationUi.notifyAfterCheckBox->setChecked(cg.value("notifyAfterAthan", false).toBool());
+     m_notificationUi.notifyAfterCheckBox->setChecked(cg.value("notifyAfterAthan", false).toBool());
      m_notificationUi.notifyAfterSpinBox->setValue(cg.value("notifyAfterAthanVal", 5).toInt());
 
 //     m_notificationUi.adhkarNotifyCheckBox->setChecked( cg.value("notifyAdhkar", true).toBool());

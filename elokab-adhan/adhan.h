@@ -71,7 +71,7 @@ private slots:
     void writeConfig();
 
     void showConfiguration();
-void showCurentDhikr();
+    void showCurentDhikr();
     void configurationAccepted();
 
     void toolTipAboutToShow();
@@ -80,7 +80,7 @@ void showCurentDhikr();
     void createTrayIcon();
     void iconActivated(QSystemTrayIcon::ActivationReason reason);
     void  loadSettings(bool /*p*/);
-   void stylize();
+    void stylize();
 private:
     Ui::Adhan *ui;
     QString m_country;
@@ -154,13 +154,13 @@ private:
     QAction *m_monthlyPrayerAct;
     // LocationForm *m_location;
     //        LocationForm *m_location;
-   // NotificationForm *m_notification;
-  //  DisplayForm *m_display;
+    // NotificationForm *m_notification;
+    //  DisplayForm *m_display;
     //----------colors-----------------
-   QColor    m_ColorBackground;
-   QColor     m_ColorText;
-   QColor     m_ColorNext;
-   QColor     m_ColorPrev;
+    QColor    m_ColorBackground;
+    QColor     m_ColorText;
+    QColor     m_ColorNext;
+    QColor     m_ColorPrev;
 
     //system try
     QAction *adhkarAction;
@@ -179,7 +179,7 @@ bool m_isCompositing;
     bool m_orderAdhkar;
     bool m_notifyAdhkar;
     int m_notifyAdhkarVal;
-     int m_lastTimeAdhkar;
+    int m_lastTimeAdhkar;
 };
 
 #endif // ADHAN_H
