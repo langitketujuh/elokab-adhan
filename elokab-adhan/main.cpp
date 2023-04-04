@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
     a.setApplicationName("elokab-adhan");
     a.setApplicationVersion("0.1");
     a.setOrganizationName("elokab");
-    a.setWindowIcon(QIcon::fromTheme("elokab-adhan",QIcon(":/images/elokab-adhan.png")));
+    a.setWindowIcon(QIcon::fromTheme("night-light-symbolic",QIcon(":/images/elokab-adhan.svg")));
 
     /// مسار مجلد البرنامج
     QDir appDir(a.applicationDirPath());

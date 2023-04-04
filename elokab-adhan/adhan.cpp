@@ -683,7 +683,7 @@ void Adhan::createTrayIcon()
 
     trayIcon = new QSystemTrayIcon(this);
     trayIcon->setContextMenu(trayIconMenu);
-    trayIcon->setIcon(QIcon::fromTheme("adhan-app",QIcon(":/images/adhan-app.png")));
+    trayIcon->setIcon(QIcon::fromTheme("night-light-symbolic",QIcon(":/images/elokab-adhan.svg")));
 }
 void Adhan::iconActivated(QSystemTrayIcon::ActivationReason reason)
 {
