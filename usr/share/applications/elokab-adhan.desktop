@@ -1,9 +1,7 @@
 [Desktop Entry]
-Categories=X-Islamic-Software;GTK;Qt;Office;Viewer;
+Categories=Qt;Utility;
 Type=Application
 Exec=elokab-adhan
-
 Icon=elokab-adhan
-Name=Prayer Time
+Name=Elokab Adhan
 Name[ar]=مواقيت الاذان
-
