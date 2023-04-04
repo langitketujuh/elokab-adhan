@@ -63,7 +63,6 @@ Adhan::Adhan(QWidget *parent) :
     mediaPlayer=new MediaPlayer;
 #endif
 #endif
-    ui->toolButtonClose->setIcon(QIcon(":/images/cancel"));
     createActions();
     createTrayIcon();
 
